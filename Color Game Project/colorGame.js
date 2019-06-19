@@ -14,18 +14,14 @@ for(var i = 0; i < modeBtn.length; i++){
         modeBtn[0].classList.remove("selected");
         modeBtn[1].classList.remove("selected");
         this.classList.add("selected");
-        if(this.textContent === "EASY"){
-            numSquares = 3;
-        } else {
-            numSquares = 6;
-        };
-        reset()
+        this.textContent === "EASY" ? numSquares = 3: numSquares = 6; 
+        reset();
         //figure out how many to show
         
         //pick new colors 
         //pick a new pickedColors
         //update page to reflect changes
-    })
+    });
 }
 
 function reset(){
@@ -39,7 +35,12 @@ function reset(){
     messageDisplay.textContent = "";
     //change colors of squares
     for(var i = 0; i < squares.length; i++){
-        squares[i].style.backgroundColor = colors[i];
+        if(colors[i]){
+            squares[i].style.display = "block";
+            squares[i].style.backgroundColor = colors[i]
+        } else{
+            squares[i].style.display = "none";
+        }
     }
     h1.style.backgroundColor = "steelblue";
 }
