@@ -10,10 +10,15 @@ body {
     padding-bottom: 30%;
     float: left;
     margin: 1.66%;
+    border-radius: 15%; 
+    transition: background-color .4s;
+    /* Enable transition on Safari & FireFox */
+    -webkit-transition: background-color .4s;
+    -moz-transition: background-color .4s;
 }
 
 #container {
-    margin: 0 auto;
+    margin: 20px  auto;
     max-width: 600px;
 }
 
@@ -36,9 +41,37 @@ h1 {
 }
 
 .selected {
-    background-color: blue;
+    color: white;
+    background-color: steelblue; 
 }
 
 #colorDisplay {
     font-size: 200%;
 }
+
+button {
+    border: none;
+    background-color: none;
+    color: steelblue;
+    font-size: inherit;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    letter-spacing: 1px;
+    outline: none; 
+    transition: all .3s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+}
+
+button:hover {
+    color: white;
+    background-color: steelblue; 
+}
+
+#message {
+    display: inline-block;
+    width: 20%;
+}
+
+
